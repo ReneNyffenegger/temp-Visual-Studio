@@ -3,3 +3,43 @@ Solution file structures projects in Visual Studio.
 State is saved in two files:
   - .sln file (text-based, shared)
   - .suo file (binary, user-specific solution options)
+
+{ .sln
+
+
+  Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps
+      allows to write non-user-specific solution properties into the solution .sln file.
+
+  Solution properties are a series of property name/value pairs.
+
+  { Header
+
+    Microsoft Visual Studio Solution File, Format Version 12.00
+    # Visual Studio Version 16
+    VisualStudioVersion = 16.0.28701.123
+    MinimumVisualStudioVersion = 10.0.40219.1
+
+  }
+  { Body
+
+    The body of an .sln file consists of several sections labeled GlobalSection, like this:
+
+
+
+  }
+
+  { Loading a solution
+
+    See: https://docs.microsoft.com/en-us/visualstudio/extensibility/internals/solution-dot-sln-file?view=vs-2019
+
+  }
+
+
+}
+{ .suo
+
+  The solution user options (.suo) file contains per-user solution options and therefore should not be checked in to source code control.
+
+  The solution user options (.suo) file is a structured storage, or compound, file stored in a binary format.
+
+}
