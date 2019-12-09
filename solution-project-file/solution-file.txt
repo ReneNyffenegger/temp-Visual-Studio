@@ -1,0 +1,5 @@
+Solution file structures projects in Visual Studio.
+
+State is saved in two files:
+  - .sln file (text-based, shared)
+  - .suo file (binary, user-specific solution options)
